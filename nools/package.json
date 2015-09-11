@@ -1,0 +1,29 @@
+{
+  "name": "nools-example",
+  "version": "0.1.0",
+  "description": "nools-example",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified! Configure in package.json\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+	    "type": "git",
+	    "url": "git+https://brosnt@github.com/brosnt/node-examples/nools.git"
+	  },
+  "keywords": [
+    "node.js",
+    "eclipse",
+    "nodeclipse"
+  ],
+  "author": "Trevor Brosnan",
+  "license": "MIT",
+  "readmeFilename": "README.md",
+  "bugs": {
+		    "url": "https://github.com/brosnt/node-examples/issues"
+		  },
+		  "homepage": "https://github.com/brosnt/node-examples/#readme",
+		  "dependencies": {
+		    "nools": "^0.4.1"
+		  }
+}
