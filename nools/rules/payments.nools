@@ -1,0 +1,41 @@
+//Define our object classes
+define Payment {
+   constructor: function(amount){
+     this.amount = amount;
+     this.holdForManualReview = false;
+     this.rejected = false;
+   }
+}
+
+//Reject any payment with a dollar amount exceeding $20,000
+rule RejectPaymentAmountOver20k {
+    when {
+		p : Payment p.amount > 20000 and p.rejected == false;
+    }
+    then {
+
+		modify(p,function(){
+          console.log("Payment of amount ["+ p.amount +"] rejected as it exceeds our cap");
+		  p.rejected = true;
+		});
+    }
+}
+
+//hold any payment with a dollar amount exceeding $10,000 for manual review
+rule HoldOver10k {
+    when {
+		p : Payment p.amount > 10000 and p.holdForManualReview == false and p.rejected == false;
+    }
+    then {
+
+		modify(p,function(){
+		  p.holdForManualReview = true;
+          console.log("Payment of amount ["+ p.amount +"] held for Manual Review");
+		});
+    }
+}
+
+
+
+
+
