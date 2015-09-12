@@ -17,7 +17,7 @@
     "nodeclipse"
   ],
   "author": "Trevor Brosnan",
-  "license": "MIT",
+  "license": "Apache 2.0",
   "readmeFilename": "README.md",
   "bugs": {
 		    "url": "https://github.com/brosnt/node-examples/issues"
